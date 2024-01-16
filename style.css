@@ -1,4 +1,8 @@
 .jumbotron {
-  padding: 2rem 1rem;
+  padding-top: 2rem;
   background-color: #f1b8e87e;
+}
+
+.about {
+  background-color: #eb7cdc85;
 }
