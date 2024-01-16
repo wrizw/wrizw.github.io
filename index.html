@@ -13,11 +13,14 @@
       crossorigin="anonymous"
     />
 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <title>Wenny Rizki Wardani | Profile</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #eb7cdc85">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Wenny Rizki Wardani</a>
         <button
@@ -32,15 +35,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav flex-grow-1">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About Me</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -50,19 +49,31 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown link
+                Services
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Administrative</a></li>
+                <li><a class="dropdown-item" href="#">Bookkeeping</a></li>
+                <li><a class="dropdown-item" href="#">Virtual Assisstant</a></li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
           </ul>
         </div>
       </div>
     </nav>
     <!-- End Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/20211219_011624.jpg" alt="Wenny" width="200" class="rounded-circle" img-thumbnail>
+      <h1 class="fs-1">Wenny Rizki Wardani</h1>
+      <p class="lead">Detail-Oriented Admin Professional | Accounting and Data Analysis Enthusiast</p>
+    </section>
+    <!-- End Jumbotron -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
