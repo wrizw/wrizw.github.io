@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freelance administrative support, bookkeeping, and beginner-level data analysis services.">
+    <meta name="keywords" content="freelance admin, bookkeeping, data analysis, document formatting, pdf conversion">
+    <meta name="author" content="Wenny">
+    <title>Wenny - Freelance Admin & Bookkeeping</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv"
-      crossorigin="anonymous"
-    />
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Wenny's Logo">
+                <span>Work with Wenny</span>
+            </div>
+            <ul>
+                <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+                <li><a href="#about" aria-label="Learn more about me">About</a></li>
+                <li><a href="#services" aria-label="View services offered">Services</a></li>
+                <li><a href="#portfolio" aria-label="See portfolio and case studies">Portfolio</a></li>
+                <li><a href="#contact" aria-label="Contact me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="images/headshot.jpg" alt="Wenny - Freelance Admin & Bookkeeper" class="hero-image">
+                <h1>Let’s Work with Wenny</h1>
+                <p>Providing reliable administrative, bookkeeping, and data analysis support for small businesses. Let’s simplify your workload!</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
 
-    <title>Wenny Rizki Wardani | Profile</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #eb7cdc85">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Wenny Rizki Wardani</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Administrative</a></li>
-                <li><a class="dropdown-item" href="#">Bookkeeping</a></li>
-                <li><a class="dropdown-item" href="#">Virtual Assisstant</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Administrative Support</h3>
+                        <p>Providing document management and data entry services to keep your records structured and accessible. I also assist with data research or web scraping to gather relevant information.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Bookkeeping</h3>
+                        <p>Specializing in spreadsheet-based bookkeeping, I help track income, expenses, and financial data, keeping your records accurate and up to date.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Data Analysis</h3>
+                        <p>Offering beginner-level data analysis, including data cleaning, visualization, and simple insights to help you understand and organize your business metrics.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>PDF & Document Formatting</h3>
+                        <p>Helping with document formatting, PDF conversion, and text extraction to ensure your files are clean, well-structured, and easily editable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/20211219_011624.jpg" alt="Wenny" width="200" class="rounded-circle" img-thumbnail>
-      <h1 class="fs-1">Wenny Rizki Wardani</h1>
-      <p class="lead">Detail-Oriented Admin Professional | Accounting and Data Analysis Enthusiast</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#eb7cdc85" fill-opacity="0.6" d="M0,192L14.1,170.7C28.2,149,56,107,85,122.7C112.9,139,141,213,169,229.3C197.6,245,226,203,254,176C282.4,149,311,139,339,149.3C367.1,160,395,192,424,176C451.8,160,480,96,508,74.7C536.5,53,565,75,593,74.7C621.2,75,649,53,678,64C705.9,75,734,117,762,133.3C790.6,149,819,139,847,138.7C875.3,139,904,149,932,170.7C960,192,988,224,1016,202.7C1044.7,181,1073,107,1101,117.3C1129.4,128,1158,224,1186,250.7C1214.1,277,1242,235,1271,208C1298.8,181,1327,171,1355,138.7C1383.5,107,1412,53,1426,26.7L1440,0L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z"></path></svg>
-    </section>
-    <!-- End Jumbotron -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Portfolio & Case Studies</h2>
+                <p>Explore real examples of how I’ve helped businesses with administrative support, bookkeeping, and data analysis. These case studies showcase my skills and approach to solving business challenges.</p>
 
-    <!-- About -->
-    <section id="about"></section>
-    <div class="container">
-      <div class="row text-center">
-        <div class="col">
-          <h2>About Me</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias impedit amet, id pariatur aliquid suscipit atque similique veniam optio. Corporis!
-        </div>
-        <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem sapiente, ratione voluptate consectetur mollitia et aliquam. Explicabo saepe, quisquam tempora, corrupti quod labore nemo blanditiis nostrum dolores rem nulla.
-        </div>
-      </div>
-    </div>
-    <!-- End About -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+                <div class="portfolio-list">
+                    <div class="portfolio-item">
+                        <h3>Organizing a Company’s Digital Documents</h3>
+                        <p>A case study on how I streamlined and digitized a small business’s paperwork, improving accessibility and reducing errors.</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <h3>Spreadsheet-Based Expense Tracking</h3>
+                        <p>Developed a custom spreadsheet system to help a client manage business expenses efficiently without the need for accounting software.</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <h3>Data Cleaning & Basic Visualization</h3>
+                        <p>Assisted in organizing and visualizing raw sales data to identify trends, leading to better business decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you're interested in working together, feel free to reach out. I’d love to hear about your needs and how I can assist.</p>
+                
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Work with Wenny. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy" aria-label="Privacy Policy">Privacy</a></li>
+                <li><a href="#accessibility" aria-label="Accessibility Statement">Accessibility</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+                                                       </html>
