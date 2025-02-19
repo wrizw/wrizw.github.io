@@ -1,4 +1,8 @@
 /* Global Styles */
+html {
+    scroll-padding-top: 80px; /* Adjust based on navbar height */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,13 +44,6 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -69,39 +66,87 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
 }
-
-nav ul li {
-    margin: 0 15px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    flex-wrap: wrap;
 }
 
-nav ul li a {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
+#nav-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
 }
 
-
-
-/* Mobile Navigation */
+/* Mobile styles */
 @media (max-width: 768px) {
-    nav {
+    #nav-menu {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 100%; /* Moves it below the navbar */
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 999; /* Ensure it's visible above other elements */
     }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+    #nav-menu.open {
+        display: flex;
+    }
+    
+    #nav-toggle {
+        display: block;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #444;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    ul.open {
+        display: flex;
     }
 }
 
@@ -181,6 +226,16 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensure spacing between headings and paragraphs */
+.services p, .portfolio p {
+    margin-top: 15px; /* Adjust as needed */
+}
+
+/* Ensure spacing between sections */
+.service-list, .portfolio-list {
+    margin-top: 30px; /* Increase spacing above the grid */
+}
+
 /* Contact Form */
 .contact form {
     max-width: 500px;
@@ -229,26 +284,3 @@ footer {
     background: #222;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-footer nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 10px;
-}
-
-footer nav ul li {
-    margin: 0 15px;
-}
-
-/* Improved Contrast */
-p {
-    color: #444; /* Slightly darker for better readability */
-}
-
-.service-item h3, .portfolio-item h3 {
-    color: #222; /* Improved contrast */
-  }
