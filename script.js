@@ -23,12 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Send data to Google Sheets without blocking form submission
             fetch(scriptURL, { method: "POST", body: formData })
-                .then((response) => {
-                    form.reset();
-                    console.log("Success! Google Sheets:", response)
-                })
-                
+                .then((response) => console.log("Success! Google Sheets:", response))
                 .catch((error) => console.error("Error! Google Sheets:", error.message));
+            
+            // Wait for Formspree to process, then reset the form after 1 second
+            setTimeout(() => {
+                form.reset();
+            }, 1000);
         });
     } else {
         console.error("Form not found! Check the form name.");
