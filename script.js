@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 navMenu.classList.remove("open");
             });
         });
-    };
-    
+    }
+
     const scriptURL = "https://script.google.com/macros/s/AKfycbxwnXvlutIftm-DBXZbvT8clG5f07svmkDLiCjmtVFGSreAhJ6WFWI1wpWyQrQc6AtMQQ/exec"; 
     const formspreeURL = "https://formspree.io/f/xdkayely"; 
     const form = document.forms["submit-to-google-sheet"];
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: formData,
                 headers: { "Accept": "application/json" },
             })
-                .then((response) => response.json())
                 .then((data) => {
                     console.log("Success! Formspree:", data);
 
@@ -57,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             successMessage.style.display = "none"; // Hide message after a few seconds
                         }
                     }, 1500);
+                })
                 .catch((error) => console.error("Error! Formspree:", error.message));
         });
     } else {
