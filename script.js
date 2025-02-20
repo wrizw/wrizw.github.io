@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Wait for Formspree to process, then reset the form after 1 second
             setTimeout(() => {
                 form.reset();
-            }, 1000);
+            }, 3500);
         });
     } else {
         console.error("Form not found! Check the form name.");
