@@ -18,11 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const scriptURL = "https://script.google.com/macros/s/AKfycbxwnXvlutIftm-DBXZbvT8clG5f07svmkDLiCjmtVFGSreAhJ6WFWI1wpWyQrQc6AtMQQ/exec"; 
     const formspreeURL = "https://formspree.io/f/xdkayely"; 
     const form = document.forms["submit-to-google-sheet"];
+    const successMessage = document.getElementById("success-message");
 
     if (form) {
         form.addEventListener("submit", (e) => {
-            e.preventDefault(); // Prevent default submission (stops page refresh)
+            e.preventDefault();  // Prevent page reload
             const formData = new FormData(form);
+
+            // Hide previous success message (if any)
+            if (successMessage) {
+                successMessage.style.display = "none";
+            }
 
             // Send data to Google Sheets
             fetch(scriptURL, { method: "POST", body: formData })
@@ -38,12 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then((response) => response.json())
                 .then((data) => {
                     console.log("Success! Formspree:", data);
-                    
-                    // Reset form after 2.5 seconds
+
+                    // Show success message
+                    if (successMessage) {
+                        successMessage.style.display = "block";
+                    }
+
+                    // Reset form after 1.5 seconds
                     setTimeout(() => {
                         form.reset();
-                    }, 2500);
-                })
+                        if (successMessage) {
+                            successMessage.style.display = "none"; // Hide message after a few seconds
+                        }
+                    }, 1500);
                 .catch((error) => console.error("Error! Formspree:", error.message));
         });
     } else {
