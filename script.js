@@ -13,23 +13,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 navMenu.classList.remove("open");
             });
         });
-    }
+    };
+    
     const scriptURL = "https://script.google.com/macros/s/AKfycbxwnXvlutIftm-DBXZbvT8clG5f07svmkDLiCjmtVFGSreAhJ6WFWI1wpWyQrQc6AtMQQ/exec"; 
+    const formspreeURL = "https://formspree.io/f/xdkayely"; 
     const form = document.forms["submit-to-google-sheet"];
 
     if (form) {
         form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default submission (stops page refresh)
             const formData = new FormData(form);
 
-            // Send data to Google Sheets without blocking form submission
+            // Send data to Google Sheets
             fetch(scriptURL, { method: "POST", body: formData })
                 .then((response) => console.log("Success! Google Sheets:", response))
                 .catch((error) => console.error("Error! Google Sheets:", error.message));
-            
-            // Wait for Formspree to process, then reset the form after 1 second
-            setTimeout(() => {
-                form.reset();
-            }, 3500);
+
+            // Send data to Formspree manually
+            fetch(formspreeURL, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log("Success! Formspree:", data);
+                    
+                    // Reset form after 2.5 seconds
+                    setTimeout(() => {
+                        form.reset();
+                    }, 2500);
+                })
+                .catch((error) => console.error("Error! Formspree:", error.message));
         });
     } else {
         console.error("Form not found! Check the form name.");
